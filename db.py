@@ -2,7 +2,7 @@ from pymongo import MongoClient
 import os
 
 def get_database():
-    client = MongoClient("mongodb+srv://seonghun:Wkd990921!@seonghun.hlvm3d7.mongodb.net/?retryWrites=true&w=majority")
+    client = MongoClient(os.environ['MONGOURI'])
     return client['seonghun']
 
 
