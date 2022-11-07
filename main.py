@@ -1,10 +1,10 @@
 import discord
+import os
 from discord.ext import commands
 from rockscissorspaper import *
 from db import *
-import config
 
-TOKEN = config.TOKEN
+
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -65,4 +65,4 @@ async def 돈(ctx, arg1, arg2):
         await ctx.channel.send('수정완료')
     except:
         await ctx.channel.send('수정실패')
-bot.run(TOKEN)
+bot.run(os.environ['token'])

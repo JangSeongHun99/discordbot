@@ -1,8 +1,8 @@
 from pymongo import MongoClient
-import config
+import os
 
 def get_database():
-    CONNECTION_STRING = config.MONGODB
+    CONNECTION_STRING = os.environ['token']
     client = MongoClient(CONNECTION_STRING)
     return client['seonghun']
 
