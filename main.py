@@ -65,4 +65,4 @@ async def 돈(ctx, arg1, arg2):
         await ctx.channel.send('수정완료')
     except:
         await ctx.channel.send('수정실패')
-bot.run(os.environ['token'])
+bot.run(os.environ['TOKEN'])

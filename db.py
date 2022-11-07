@@ -2,7 +2,7 @@ from pymongo import MongoClient
 import os
 
 def get_database():
-    CONNECTION_STRING = os.environ['token']
+    CONNECTION_STRING = os.environ['MONGOURI']
     client = MongoClient(CONNECTION_STRING)
     return client['seonghun']
 
