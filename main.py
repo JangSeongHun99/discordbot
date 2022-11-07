@@ -2,8 +2,9 @@ import discord
 from discord.ext import commands
 from rockscissorspaper import *
 from db import *
+import config
 
-TOKEN = 'MTAxOTE4ODAzMDA3MTkwNjMyNA.GTQ_zc.GSqWR7gR4RXEAizFQ-Uy42s7QKPKyWky5377U8'
+TOKEN = config.TOKEN
 
 intents = discord.Intents.default()
 intents.message_content = True
@@ -65,5 +66,3 @@ async def 돈(ctx, arg1, arg2):
     except:
         await ctx.channel.send('수정실패')
 bot.run(TOKEN)
-# if __name__ == '__main__':
-#     print_hi('PyCharm')

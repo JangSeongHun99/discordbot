@@ -1,7 +1,8 @@
 from pymongo import MongoClient
+import config
 
 def get_database():
-    CONNECTION_STRING = "mongodb+srv://seonghun:Wkd990921!@seonghun.hlvm3d7.mongodb.net/?retryWrites=true&w=majority"
+    CONNECTION_STRING = config.MONGODB
     client = MongoClient(CONNECTION_STRING)
     return client['seonghun']
 
